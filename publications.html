@@ -1,0 +1,643 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Publications – Gianni Franchi</title>
+
+    <meta name="author" content="Gianni Franchi">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <style>
+      /* --- Navigation Bar --- */
+      .navbar {
+        background-color: #f8f8f8;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .navbar a {
+        text-decoration: none;
+        color: #115996;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      .navbar a:hover {
+        color: #0078ff;
+      }
+
+      /* --- Page Layout --- */
+      body {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1, h2, h3 {
+        color: #115996;
+      }
+
+      .pub-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .pub-item {
+        border-bottom: 1px solid #e0e0e0;
+        padding: 15px 0;
+      }
+
+      .pub-title {
+        font-weight: 600;
+        font-size: 1.05rem;
+        color: #115996;
+      }
+
+      .pub-title a {
+        text-decoration: none;
+        color: #115996;
+      }
+
+      .pub-title a:hover {
+        color: #0078ff;
+      }
+
+      .pub-authors {
+        font-size: 0.95rem;
+        color: #555;
+        margin-top: 5px;
+      }
+
+      .pub-venue {
+        font-size: 0.9rem;
+        color: #777;
+        margin-top: 3px;
+      }
+
+      footer {
+        text-align: right;
+        font-size: small;
+        color: #777;
+        margin: 40px 20px 20px;
+      }
+
+      footer a {
+        color: #115996;
+      }
+
+      footer a:hover {
+        color: #0078ff;
+      }
+
+      .year-header {
+        margin-top: 30px;
+        font-size: 1.3rem;
+        color: #115996;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 5px;
+      }
+
+      .loading {
+        text-align: center;
+        color: #777;
+        padding: 40px;
+      }
+
+      .error {
+        color: red;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="team.html">Team</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="pub-container">
+      <h1 style="text-align:center;">Publications</h1>
+      <p style="text-align:center; color:#555;">
+        Automatically updated from 
+        <a href="https://scholar.google.com/citations?hl=en&user=ZCW6-psAAAAJ" target="_blank">Google Scholar</a> 
+        and 
+        <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a>.
+      </p>
+
+      <div id="publications" class="loading">Loading publications...</div>
+    </div>
+
+    <footer>
+      <p>
+        This page is automatically generated from Semantic Scholar.
+        View <a href="https://github.com/giannifranchi/giannifranchi.github.io">source code</a>.
+      </p>
+    </footer>
+
+    <script>
+      // Sample data - replace this with your actual publications.json file
+      const samplePublications = [
+  {
+    "title": "Ensembling Pruned Attention Heads For Uncertainty-Aware Efficient Transformers",
+    "authors": "Firas Gabetni, Giuseppe Curci, Andrea Pilzer, Subhankar Roy, Elisa Ricci, Gianni Franchi",
+    "venue": "",
+    "year": 2025,
+    "link": "https://www.semanticscholar.org/paper/644ddec65d5e5e826846be376dbe67660b529f4a"
+  },
+  {
+    "title": "Foundation models and Transformers for anomaly detection: A survey",
+    "authors": "Mouin Ben Ammar, Arturo Mendoza, Nacim Belkhir, Antoine Manzanera, Gianni Franchi",
+    "venue": "Information Fusion",
+    "year": 2025,
+    "link": "https://www.semanticscholar.org/paper/09d6016ee21f94ec73059a1a8f55ec3edf992bf6"
+  },
+  {
+    "title": "Collaborative Instance Object Navigation: Leveraging Uncertainty-Awareness to Minimize Human-Agent Dialogues",
+    "authors": "Francesco Taioli, Edoardo Zorzi, Gianni Franchi, A. Castellini, Alessandro Farinelli, Marco Cristani, Yiming Wang",
+    "venue": "",
+    "year": 2024,
+    "link": "https://www.semanticscholar.org/paper/2ed520dc25f2da014c459c1c2260cd1019a9a3f3"
+  },
+  {
+    "title": "Double Descent Meets Out-of-Distribution Detection: Theoretical Insights and Empirical Analysis on the role of model complexity",
+    "authors": "Mouin Ben Ammar, David Brellmann, Arturo Mendoza, Antoine Manzanera, Gianni Franchi",
+    "venue": "arXiv.org",
+    "year": 2024,
+    "link": "https://www.semanticscholar.org/paper/a721cda5ecac27ec9ecc9942a0cbb2dabb427eb4"
+  },
+  {
+    "title": "Organizing Unstructured Image Collections using Natural Language",
+    "authors": "Mingxuan Liu, Zhun Zhong, Jun Li, Gianni Franchi, Subhankar Roy, Elisa Ricci",
+    "venue": "arXiv.org",
+    "year": 2024,
+    "link": "https://www.semanticscholar.org/paper/8645bdb02b82c0f1734e33f41268d58e7ba44fb8"
+  },
+  {
+    "title": "Towards Understanding and Quantifying Uncertainty for Text-to-Image Generation",
+    "authors": "Gianni Franchi, Dat Nguyen Trong, Nacim Belkhir, Guoxuan Xia, Andrea Pilzer",
+    "venue": "Computer Vision and Pattern Recognition",
+    "year": 2024,
+    "link": "https://www.semanticscholar.org/paper/96dcd1e3fdbdfe207bc0600f081c1e1f67e432fb"
+  },
+  {
+    "title": "Hierarchical Light Transformer Ensembles for Multimodal Trajectory Forecasting",
+    "authors": "Adrien Lafage, Mathieu Barbier, Gianni Franchi, David Filliat",
+    "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+    "year": 2024,
+    "link": "https://www.semanticscholar.org/paper/0feabf8076e44320f4d0a9be4520aba0efdd9511"
+  },
+  {
+    "title": "Towards Understanding Why Label Smoothing Degrades Selective Classification and How to Fix It",
+    "authors": "Guoxuan Xia, Olivier Laurent, Gianni Franchi, C. Bouganis",
+    "venue": "International Conference on Learning Representations",
+    "year": 2024,
+    "link": "https://www.semanticscholar.org/paper/55cad4e02614ca362b1251d0a610ff5f9d74d769"
+  },
+  {
+    "title": "Frustratingly Easy Test-Time Adaptation of Vision-Language Models",
+    "authors": "Matteo Farina, Gianni Franchi, Giovanni Iacca, Massimiliano Mancini, Elisa Ricci",
+    "venue": "Neural Information Processing Systems",
+    "year": 2024,
+    "link": "https://www.semanticscholar.org/paper/4f861f449cc9078989b91b2bca681f58d9b3b071"
+  },
+  {
+    "title": "The Robust Semantic Segmentation UNCV2023 Challenge Results",
+    "authors": "Xuanlong Yu, Yi Zuo, Zitao Wang, Xiaowen Zhang, Jiaxuan Zhao, Yuting Yang, Licheng Jiao, Rui Peng, Xinyi Wang, Junpei Zhang, Kexin Zhang, Fang Liu, Roberto Alcover-Couso, Juan C. Sanmiguel, Marcos Escudero-Viñolo, Hanlin Tian, Kenta Matsui, Tianhao Wang, Fahmy Adan, Zhitong Gao, Xuming He, Quentin Bouniot, Hossein Moghaddam, Shyam Nandan Rai, Fabio Cermelli, Carlo Masone, Andrea Pilzer, Elisa Ricci, Andrei Bursuc, A. Solin, M. Trapp, Rui Li, Angela Yao, Wenlong Chen, Ivor J. A. Simpson, Neill D. F. Campbell, G. Franchi",
+    "venue": "2023 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/4da890c9fc5b9e9b320fdc351fd1eb4211de2205"
+  },
+  {
+    "title": "Discretization-Induced Dirichlet Posterior for Robust Uncertainty Quantification on Regression",
+    "authors": "Xuanlong Yu, G. Franchi, Jindong Gu, Emanuel Aldea",
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/9915ef6a60bcc75f41fac35e267b7ff9033c3801"
+  },
+  {
+    "title": "Improving CLIP Robustness with Knowledge Distillation and Self-Training",
+    "authors": "Clement Laroudie, Andrei Bursuc, Mai Lan Ha, G. Franchi",
+    "venue": "arXiv.org",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/cdd0752b33a5d9747a74c7483253366575af4c41"
+  },
+  {
+    "title": "How to effectively train an ensemble of Faster R-CNN object detectors to quantify uncertainty",
+    "authors": "Denis Mbey Akola, Gianni Franchi",
+    "venue": "arXiv.org",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/83cd61998fd8333b3a2c2054414b1d86c868d95e"
+  },
+  {
+    "title": "Make Me a BNN: A Simple Strategy for Estimating Bayesian Uncertainty from Pre-trained Models",
+    "authors": "G. Franchi, Olivier Laurent, Maxence Legu'ery, Andrei Bursuc, Andrea Pilzer, Angela Yao",
+    "venue": "Computer Vision and Pattern Recognition",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/c39e6c0951b44e601b88bbf5ef105d82d6c82294"
+  },
+  {
+    "title": "Learning to generate training datasets for robust semantic segmentation",
+    "authors": "Marwane Hariat, Olivier Laurent, Rémi Kazmierczak, Shihao Zhang, Andrei Bursuc, Angela Yao, G. Franchi",
+    "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/d26f4154c20992939c5425963638d9fe4ce9f49f"
+  },
+  {
+    "title": "InfraParis: A multi-modal and multi-task autonomous driving dataset",
+    "authors": "G. Franchi, Marwane Hariat, Xuanlong Yu, Nacim Belkhir, Antoine Manzanera, David Filliat",
+    "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/da995e38275c3526a2f1eee31a4e805ca58e5014"
+  },
+  {
+    "title": "A Symmetry-Aware Exploration of Bayesian Neural Network Posteriors",
+    "authors": "Olivier Laurent, Emanuel Aldea, G. Franchi",
+    "venue": "International Conference on Learning Representations",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/2acf64667cb88ae9a3305465326b8487deb6dd1a"
+  },
+  {
+    "title": "Scaling for Training Time and Post-hoc Out-of-distribution Detection Enhancement",
+    "authors": "Kai Xu, Rongyu Chen, Gianni Franchi, Angela Yao",
+    "venue": "International Conference on Learning Representations",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/2210d7ad724b600505aa4a84b392e90bf14f4fd3"
+  },
+  {
+    "title": "NECO: NEural Collapse Based Out-of-distribution detection",
+    "authors": "Mouin Ben Ammar, Nacim Belkhir, Sebastian Popescu, Antoine Manzanera, Gianni Franchi",
+    "venue": "International Conference on Learning Representations",
+    "year": 2023,
+    "link": "https://www.semanticscholar.org/paper/ff29bf27e1c4e95c4eec448ed1d4adfa81983302"
+  },
+  {
+    "title": "A study of deep perceptual metrics for image quality assessment",
+    "authors": "Rémi Kazmierczak, G. Franchi, Nacim Belkhir, A. Manzanera, David Filliat",
+    "venue": "arXiv.org",
+    "year": 2022,
+    "link": "https://www.semanticscholar.org/paper/07cfa9fb69d4bfb68434371b8a23e641938f65fc"
+  },
+  {
+    "title": "MUAD: Multiple Uncertainties for Autonomous Driving benchmark for multiple uncertainty types and tasks",
+    "authors": "G. Franchi, Xuanlong Yu, Andrei Bursuc, Rémi Kazmierczak, Séverine Dubuisson, Emanuel Aldea, David Filliat",
+    "venue": "arXiv.org",
+    "year": 2022,
+    "link": "https://www.semanticscholar.org/paper/dcb53dda1ab51280a7203661a8e3b757769309a2"
+  },
+  {
+    "title": "MUAD: Multiple Uncertainties for Autonomous Driving, a benchmark for multiple uncertainty types and tasks",
+    "authors": "G. Franchi, Xuanlong Yu, Andrei Bursuc, Ángel Tena, Rémi Kazmierczak, Séverine Dubuisson, Emanuel Aldea, David Filliat",
+    "venue": "British Machine Vision Conference",
+    "year": 2022,
+    "link": "https://www.semanticscholar.org/paper/597502527f507ad2a07aba4d6061b7620e449dac"
+  },
+  {
+    "title": "Latent Discriminant deterministic Uncertainty",
+    "authors": "G. Franchi, Xuanlong Yu, Andrei Bursuc, Emanuel Aldea, Séverine Dubuisson, David Filliat",
+    "venue": "European Conference on Computer Vision",
+    "year": 2022,
+    "link": "https://www.semanticscholar.org/paper/036e538d7b5a0711612eeebbeec2c132e66da538"
+  },
+  {
+    "title": "One Versus All for Deep Neural Network for Uncertainty (OVNNI) Quantification",
+    "authors": "G. Franchi, Andrei Bursuc, Emanuel Aldea, Séverine Dubuisson, I. Bloch",
+    "venue": "IEEE Access",
+    "year": 2022,
+    "link": "https://www.semanticscholar.org/paper/b764c2e58f1145e89675c568fd5bbb9148721c85"
+  },
+  {
+    "title": "On Monocular Depth Estimation and Uncertainty Quantification Using Classification Approaches for Regression",
+    "authors": "Xuanlong Yu, G. Franchi, Emanuel Aldea",
+    "venue": "International Conference on Information Photonics",
+    "year": 2022,
+    "link": "https://www.semanticscholar.org/paper/2f88f807dc30e9dd2cc5facac12b86ee908761f3"
+  },
+  {
+    "title": "Packed-Ensembles for Efficient Uncertainty Estimation",
+    "authors": "Olivier Laurent, Adrien Lafage, Enzo Tartaglione, Geoffrey Daniel, Jean-Marc Martinez, Andrei Bursuc, G. Franchi",
+    "venue": "International Conference on Learning Representations",
+    "year": 2022,
+    "link": "https://www.semanticscholar.org/paper/00961426bef856073e7a57d785883b1b0a2f6050"
+  },
+  {
+    "title": "Greybox XAI: a Neural-Symbolic learning framework to produce interpretable predictions for image classification",
+    "authors": "Adrien Bennetot, G. Franchi, J. Ser, Raja Chatila, Natalia Díaz Rodríguez",
+    "venue": "Knowledge-Based Systems",
+    "year": 2022,
+    "link": "https://www.semanticscholar.org/paper/170f4e654e96e08d7c3d8150a03229317ea77ca4"
+  },
+  {
+    "title": "Supplemental Materials: Robust Semantic Segmentation with Superpixel-Mix",
+    "authors": "G. Franchi, Nacim Belkhir, Mai Lan Ha, Yufei Hu, Andrei Bursuc, Volker Blanz, Angela Yao, Valeo.ai",
+    "venue": "",
+    "year": 2021,
+    "link": "https://www.semanticscholar.org/paper/c3b7da22c12a78ce2ff7fc86beb7969b60d90ebd"
+  },
+  {
+    "title": "Learning a Discriminant Latent Space with Neural Discriminant Analysis",
+    "authors": "Mai Lan Ha, G. Franchi, Emanuel Aldea, V. Blanz",
+    "venue": "arXiv.org",
+    "year": 2021,
+    "link": "https://www.semanticscholar.org/paper/28b6f8b50a71598cc7d6e79e2661ea80d187f04f"
+  },
+  {
+    "title": "Reliable Semantic Segmentation with Superpixel-Mix",
+    "authors": "G. Franchi, Nacim Belkhir, Mai Lan Ha, Yufei Hu, Andrei Bursuc, V. Blanz, Angela Yao",
+    "venue": "arXiv.org",
+    "year": 2021,
+    "link": "https://www.semanticscholar.org/paper/5926fb8f904be596d3f8d9266b8b0b010d42c107"
+  },
+  {
+    "title": "Robust Semantic Segmentation with Superpixel-Mix",
+    "authors": "G. Franchi, Nacim Belkhir, Mai Lan Ha, Yufei Hu, Andrei Bursuc, V. Blanz, Angela Yao",
+    "venue": "British Machine Vision Conference",
+    "year": 2021,
+    "link": "https://www.semanticscholar.org/paper/422ff5da34fa241269ef7b3b56254030daa0b45a"
+  },
+  {
+    "title": "SLURP: Side Learning Uncertainty for Regression Problems",
+    "authors": "Xuanlong Yu, G. Franchi, Emanuel Aldea",
+    "venue": "British Machine Vision Conference",
+    "year": 2021,
+    "link": "https://www.semanticscholar.org/paper/daba5f8845640eafae8d3e4dd7b0b18b0852528a"
+  },
+  {
+    "title": "EXplainable Neural-Symbolic Learning (X-NeSyL) methodology to fuse deep learning representations with expert knowledge graphs: the MonuMAI cultural heritage use case",
+    "authors": "Natalia D'iaz-Rodr'iguez, Alberto Lamas, Jules Sanchez, G. Franchi, Ivan Donadello, S. Tabik, David Filliat, P. Cruz, Rosana Montes, Francisco Herrera",
+    "venue": "Information Fusion",
+    "year": 2021,
+    "link": "https://www.semanticscholar.org/paper/dfb65ea2130d0e58ea09d7adc45d71700cebe6fc"
+  },
+  {
+    "title": "Learning Deep Morphological Networks with Neural Architecture Search",
+    "authors": "Yufei Hu, Nacim Belkhir, J. Angulo, Angela Yao, G. Franchi",
+    "venue": "Pattern Recognition",
+    "year": 2021,
+    "link": "https://www.semanticscholar.org/paper/4f5f9bfe470b86c8bb1f654d2b38e53a30a78649"
+  },
+  {
+    "title": "Deep active learning for multiple object tracking",
+    "authors": "Emanuel Aldea Satie, G. Franchi",
+    "venue": "",
+    "year": 2020,
+    "link": "https://www.semanticscholar.org/paper/78119dd91214cac067b78c5968cd27375e45a507"
+  },
+  {
+    "title": "One Versus all for deep Neural Network Incertitude (OVNNI) quantification",
+    "authors": "G. Franchi, Andrei Bursuc, Emanuel Aldea, Séverine Dubuisson, I. Bloch",
+    "venue": "arXiv.org",
+    "year": 2020,
+    "link": "https://www.semanticscholar.org/paper/67a42aef8bd2847b3cec53a28035847536303811"
+  },
+  {
+    "title": "Encoding the Latent Posterior of Bayesian Neural Networks for Uncertainty Quantification",
+    "authors": "G. Franchi, Andrei Bursuc, Emanuel Aldea, Séverine Dubuisson, I. Bloch",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "year": 2020,
+    "link": "https://www.semanticscholar.org/paper/15c80624081df3b7aadf1a26d7d85b88cbcd8074"
+  },
+  {
+    "title": "Tracking Hundreds of People in Densely Crowded Scenes With Particle Filtering Supervising Deep Convolutional Neural Networks",
+    "authors": "G. Franchi, Emanuel Aldea, Séverine Dubuisson, I. Bloch",
+    "venue": "International Conference on Information Photonics",
+    "year": 2020,
+    "link": "https://www.semanticscholar.org/paper/46a42b99614ee09993f277a60e83c7ad2045bb50"
+  },
+  {
+    "title": "Deep morphological networks",
+    "authors": "G. Franchi, Amin Fehri, Angela Yao",
+    "venue": "Pattern Recognition",
+    "year": 2020,
+    "link": "https://www.semanticscholar.org/paper/b31fd5d60f4722c1b565f7f7ad9f0d0ea197db48"
+  },
+  {
+    "title": "Crowd Behavior Characterization for Scene Tracking",
+    "authors": "G. Franchi, Emanuel Aldea, Séverine Dubuisson, I. Bloch",
+    "venue": "Advanced Video and Signal Based Surveillance",
+    "year": 2019,
+    "link": "https://www.semanticscholar.org/paper/c3baabce6353eed19b073cf7d7c73d41c5e33d9f"
+  },
+  {
+    "title": "TRADI: Tracking deep neural network weight distributions",
+    "authors": "G. Franchi, Andrei Bursuc, Emanuel Aldea, Séverine Dubuisson, I. Bloch",
+    "venue": "European Conference on Computer Vision",
+    "year": 2019,
+    "link": "https://www.semanticscholar.org/paper/f4fe039b47490d96b0511fae33ceb240b87baa8f"
+  },
+  {
+    "title": "Supervised Deep Kriging for Single-Image Super-Resolution",
+    "authors": "G. Franchi, Angela Yao, A. Kolb",
+    "venue": "German Conference on Pattern Recognition",
+    "year": 2018,
+    "link": "https://www.semanticscholar.org/paper/0c0fcaf04836c4803d4e11200519a0190424c739"
+  },
+  {
+    "title": "Segmentation and Shape Extraction from Convolutional Neural Networks",
+    "authors": "Mai Lan Ha, G. Franchi, Michael Möller, A. Kolb, V. Blanz",
+    "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+    "year": 2018,
+    "link": "https://www.semanticscholar.org/paper/823db813f036365cf9b22b2081ec167a2b582532"
+  },
+  {
+    "title": "Spatial machine learning applied to multivariate and multimodal images. (Machine learning spatial appliquée aux images multivariées et multimodales)",
+    "authors": "G. Franchi",
+    "venue": "",
+    "year": 2016,
+    "link": "https://www.semanticscholar.org/paper/1b0e92016df508eacd6c9c9fe4ce51496992364f"
+  },
+  {
+    "title": "A deep spatial/spectral descriptor of hyperspectral texture using scattering transform",
+    "authors": "G. Franchi, J. Angulo",
+    "venue": "International Conference on Information Photonics",
+    "year": 2016,
+    "link": "https://www.semanticscholar.org/paper/dfb6989da96926e99f00cf840b280e19bd6d8ce8"
+  },
+  {
+    "title": "Morphological Principal Component Analysis for Hyperspectral Image Analysis",
+    "authors": "G. Franchi, J. Angulo",
+    "venue": "ISPRS Int. J. Geo Inf.",
+    "year": 2016,
+    "link": "https://www.semanticscholar.org/paper/a42f8d662e39c9a29d7efcb7b019eafb500c1250"
+  },
+  {
+    "title": "Quantization of Hyperspectral Image Manifold Using Probabilistic Distances",
+    "authors": "G. Franchi, J. Angulo",
+    "venue": "International Conference on Geometric Science of Information",
+    "year": 2015,
+    "link": "https://www.semanticscholar.org/paper/ef406e99e172be5883732c69af5b7650c30c1aaf"
+  },
+  {
+    "title": "Bagging Stochastic Watershed on Natural Color Image Segmentation",
+    "authors": "G. Franchi, J. Angulo",
+    "venue": "International Symposium on Mathematical Morphology and Its Application to Signal and Image Processing",
+    "year": 2015,
+    "link": "https://www.semanticscholar.org/paper/5046bb5723a9e092b18dc5f4f536a03b7d860870"
+  },
+  {
+    "title": "Ordering on the Probability Simplex of Endmembers for Hyperspectral Morphological Image Processing",
+    "authors": "G. Franchi, J. Angulo",
+    "venue": "International Symposium on Mathematical Morphology and Its Application to Signal and Image Processing",
+    "year": 2015,
+    "link": "https://www.semanticscholar.org/paper/6aea41abb12270c1f61d92723f0c7f9756e12d47"
+  },
+  {
+    "title": "Unsupervised Morphological Multiscale Segmentation of Scanning Electron Microscopy Images",
+    "authors": "G. Franchi, J. Angulo, M. Moreaud",
+    "venue": "",
+    "year": 2014,
+    "link": "https://www.semanticscholar.org/paper/529207272abc326e38c3f02ec627cdbd51c4448d"
+  },
+  {
+    "title": "Spatially-Variant Area Openings for Reference-Driven Adaptive Contour Preserving Filtering",
+    "authors": "G. Franchi, J. Angulo",
+    "venue": "International Conference on Pattern Recognition",
+    "year": 2014,
+    "link": "https://www.semanticscholar.org/paper/4c088d11c4e9ac4df0e647ef8457de3c5338396d"
+  },
+  {
+    "title": "Comparative study on morphological principal component analysis of hyperspectral images",
+    "authors": "G. Franchi, J. Angulo",
+    "venue": "Workshop on Hyperspectral Image and Signal Processing",
+    "year": 2014,
+    "link": "https://www.semanticscholar.org/paper/08435c48f65095034a38251a3048ecc693c74e7c"
+  },
+  {
+    "title": "Object tracking in complex scenes by means of the correspondence based method",
+    "authors": "G. Franchi, P. Gamba, A. Marazzi, A. Mecocci",
+    "venue": "Proceedings of 8th Mediterranean Electrotechnical Conference on Industrial Applications in Power Systems, Computer Science and Telecommunications (MELECON 96)",
+    "year": 1996,
+    "link": "https://www.semanticscholar.org/paper/3ef09f51421d513e67532236d9ed1d50a2e3d949"
+  }
+];
+
+      async function loadPublications() {
+        const container = document.getElementById('publications');
+        
+        try {
+          let pubs;
+          
+          // Try to load from publications.json file
+          try {
+            const response = await fetch('publications.json');
+            if (response.ok) {
+              pubs = await response.json();
+            } else {
+              // If file doesn't exist, use sample data
+              console.log('publications.json not found, using sample data');
+              pubs = samplePublications;
+            }
+          } catch (fetchError) {
+            // If fetch fails (e.g., local file system), use sample data
+            console.log('Cannot fetch publications.json, using sample data');
+            pubs = samplePublications;
+          }
+
+          // Validate data
+          if (!Array.isArray(pubs) || pubs.length === 0) {
+            container.innerHTML = "<p class='error'>⚠️ No publications found.</p>";
+            return;
+          }
+
+          // Sort by year (newest first)
+          pubs.sort((a, b) => (b.year || 0) - (a.year || 0));
+
+          // Group publications by year
+          const grouped = {};
+          pubs.forEach(pub => {
+            const year = pub.year || 'Unknown Year';
+            if (!grouped[year]) {
+              grouped[year] = [];
+            }
+            grouped[year].push(pub);
+          });
+
+          // Build HTML
+          container.innerHTML = '';
+          
+          // Sort years in descending order
+          const sortedYears = Object.keys(grouped).sort((a, b) => {
+            if (a === 'Unknown Year') return 1;
+            if (b === 'Unknown Year') return -1;
+            return b - a;
+          });
+
+          sortedYears.forEach(year => {
+            // Create year section
+            const yearDiv = document.createElement('div');
+            yearDiv.className = 'year-block';
+            
+            const yearHeader = document.createElement('h2');
+            yearHeader.className = 'year-header';
+            yearHeader.textContent = year;
+            yearDiv.appendChild(yearHeader);
+
+            // Add publications for this year
+            grouped[year].forEach(pub => {
+              const pubDiv = document.createElement('div');
+              pubDiv.className = 'pub-item';
+
+              // Title (with link if available)
+              const titleDiv = document.createElement('div');
+              titleDiv.className = 'pub-title';
+              if (pub.link) {
+                const link = document.createElement('a');
+                link.href = pub.link;
+                link.target = '_blank';
+                link.textContent = pub.title;
+                titleDiv.appendChild(link);
+              } else {
+                titleDiv.textContent = pub.title;
+              }
+              pubDiv.appendChild(titleDiv);
+
+              // Authors
+              if (pub.authors) {
+                const authorsDiv = document.createElement('div');
+                authorsDiv.className = 'pub-authors';
+                authorsDiv.textContent = pub.authors;
+                pubDiv.appendChild(authorsDiv);
+              }
+
+              // Venue
+              const venueDiv = document.createElement('div');
+              venueDiv.className = 'pub-venue';
+              const venueParts = [];
+              if (pub.venue) venueParts.push(pub.venue);
+              if (pub.year) venueParts.push(pub.year);
+              venueDiv.textContent = venueParts.join(' — ');
+              pubDiv.appendChild(venueDiv);
+
+              yearDiv.appendChild(pubDiv);
+            });
+
+            container.appendChild(yearDiv);
+          });
+
+        } catch (err) {
+          console.error('Error loading publications:', err);
+          container.innerHTML = 
+            "<p class='error'>⚠️ Unable to load publications. Please check the console for details.</p>";
+        }
+      }
+
+      // Load publications when page loads
+      loadPublications();
+    </script>
+  </body>
+</html>
