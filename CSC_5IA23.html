@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROB313 – Deep Learning in Computer Vision</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-3">ROB313 – Deep Learning in Computer Vision</h1>
+      <h2 class="text-2xl sm:text-3xl italic mb-2">ENSTA — Academic Year 2025–2026</h2>
+      <p class="text-lg sm:text-xl font-light">Programming, Theory, and Practice of Robust Computer Vision</p>
+    </div>
+  </section>
+
+  <!-- Course Information -->
+  <section class="max-w-5xl mx-auto bg-white shadow-md rounded-2xl -mt-10 p-8 mb-12">
+    <div class="flex flex-col sm:flex-row items-center mb-6">
+      <img src="logo_IPP.png" alt="ENSTA Logo" class="h-20 w-auto mb-4 sm:mb-0 sm:mr-6">
+      <div class="text-center sm:text-left">
+        <p class="text-gray-700"><strong>Professors:</strong> Gianni Franchi (ENSTA Paris), Vicky Kalogeiton (LIX, École Polytechnique), Andrei Bursuc (Valeo.ai)</p>
+        <p class="text-gray-700 mt-2"><strong>Teaching Assistants:</strong> Marwane Hariat, Firas Gabetni, Rémi Kazmierczak</p>
+        <p class="text-gray-700 mt-2"><strong>Assessment:</strong> Laboratory reports and written exam</p>
+      </div>
+    </div>
+
+    <hr class="my-6 border-gray-300">
+
+    <!-- Description -->
+    <div>
+      <h3 class="text-2xl font-semibold text-blue-700 mb-3">Course Description</h3>
+      <p class="text-gray-700 leading-relaxed">
+        This course provides a comprehensive introduction to modern deep learning techniques applied to computer vision tasks,
+        with an emphasis on <strong>robustness, generalization, and interpretability</strong>. Students will learn the theoretical
+        foundations of convolutional and generative models, explore recent advances in visual foundation models, and understand
+        the challenges of uncertainty estimation and explainability in real-world vision systems.
+      </p>
+
+      <p class="text-gray-700 leading-relaxed mt-4">
+        Through a combination of lectures and hands-on lab sessions, students will gain practical experience with neural network
+        architectures, segmentation, tracking, and self-supervised learning. The course culminates in a written examination and
+        applied lab work designed to test understanding and implementation skills.
+      </p>
+    </div>
+
+    <!-- Objectives -->
+    <div class="mt-8">
+      <h3 class="text-2xl font-semibold text-blue-700 mb-3">Learning Objectives</h3>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Understand the fundamental principles of deep learning for computer vision.</li>
+        <li>Implement and evaluate CNNs, VAEs, GANs, and diffusion models.</li>
+        <li>Apply modern tracking and segmentation techniques in real-world scenarios.</li>
+        <li>Analyze uncertainty, robustness, and explainability in visual models.</li>
+        <li>Critically assess current research and trends in robust computer vision.</li>
+      </ul>
+    </div>
+
+    <!-- Evaluation -->
+    <div class="mt-8">
+      <h3 class="text-2xl font-semibold text-blue-700 mb-3">Evaluation</h3>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Laboratory reports (40%)</li>
+        <li>Written exam (60%)</li>
+        <li>Optional bonus homeworks: +2 points per completed assignment</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Course Schedule -->
+  <section class="max-w-6xl mx-auto my-16 px-6">
+    <h1 class="text-4xl font-bold text-blue-600 mb-6 text-center">Course Schedule – ROB313</h1>
+
+    <div class="overflow-x-auto shadow-md rounded-2xl bg-white">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-blue-600 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left text-sm font-semibold uppercase tracking-wide">Date</th>
+            <th class="px-4 py-3 text-left text-sm font-semibold uppercase tracking-wide">Description</th>
+            <th class="px-4 py-3 text-left text-sm font-semibold uppercase tracking-wide">Instructor(s)</th>
+            <th class="px-4 py-3 text-left text-sm font-semibold uppercase tracking-wide">Resources</th>
+            <th class="px-4 py-3 text-left text-sm font-semibold uppercase tracking-wide">Room</th>
+          </tr>
+        </thead>
+
+        <tbody class="divide-y divide-gray-100 text-gray-800">
+          <!-- Week 1 -->
+          <tr class="bg-blue-50">
+            <td class="px-4 py-4 align-top font-semibold text-sm">Fri 29/11/2024<br>9:00–12:15</td>
+            <td class="px-4 py-4">
+              Introduction to Deep Learning and Semantic Segmentation.
+            </td>
+            <td class="px-4 py-4">Gianni Franchi</td>
+            <td class="px-4 py-4">
+              <a href="IA323/cours_deep.pdf" class="text-blue-600 hover:underline block">Lecture: Introduction to Deep Learning</a>
+              <a href="IA323/cours_semantic_segmentation.pdf" class="text-blue-600 hover:underline block">Lecture: Semantic Segmentation</a>
+            </td>
+            <td class="px-4 py-4">BEM-1021004</td>
+          </tr>
+
+          <!-- Week 2 -->
+          <tr>
+            <td class="px-4 py-4 align-top font-semibold text-sm">Fri 06/12/2024<br>9:00–12:15</td>
+            <td class="px-4 py-4">
+              <ul class="list-disc list-inside space-y-1">
+                <li>Traditional Tracking and Generative Adversarial Networks (GANs).</li>
+                <li class="text-red-600 font-semibold">Optional Homework: Conditional GAN or VQ-VAE on Fashion MNIST (+2 pts)</li>
+              </ul>
+            </td>
+            <td class="px-4 py-4">Marwane Hariat</td>
+            <td class="px-4 py-4">
+              <a href="IA323/ROB313_Tracking.pdf" class="text-blue-600 hover:underline block">Lecture: Classical Tracking</a>
+              <a href="IA323/Cours_GAN.pdf" class="text-blue-600 hover:underline block">Lecture: GANs</a>
+            </td>
+            <td class="px-4 py-4">BEM-1021004</td>
+          </tr>
+
+          <!-- Week 3 -->
+          <tr class="bg-blue-50">
+            <td class="px-4 py-4 align-top font-semibold text-sm">Fri 13/12/2024<br>9:00–12:15</td>
+            <td class="px-4 py-4">Variational Autoencoders (VAEs) and Diffusion Models.</td>
+            <td class="px-4 py-4">Vicky Kalogeiton</td>
+            <td class="px-4 py-4">
+              <a href="IA323/2024-ENSTA-VickyKalogeiton.pdf" class="text-blue-600 hover:underline block">Lecture: VAEs and Diffusion Models</a>
+            </td>
+            <td class="px-4 py-4">BEM-1021004</td>
+          </tr>
+
+          <!-- Week 4 -->
+          <tr>
+            <td class="px-4 py-4 align-top font-semibold text-sm">Fri 20/12/2024<br>9:00–12:15</td>
+            <td class="px-4 py-4">
+              <ul class="list-disc list-inside space-y-1">
+                <li>Lab: Deep Learning for Semantic Segmentation</li>
+                <li class="text-red-600 font-semibold">Optional Homework: Uncertainty Quantification (+2 pts)</li>
+              </ul>
+            </td>
+            <td class="px-4 py-4">Gianni Franchi, Rémi Kazmierczak, Marwane Hariat</td>
+            <td class="px-4 py-4">
+              <a href="IA323/cours_Uncertainty_Quantification.pdf" class="text-blue-600 hover:underline block">Lecture: Uncertainty Quantification</a>
+              <a href="https://colab.research.google.com/drive/1ITwcaXhDdg_MK49QhQqCCVQNFJ9TAY4C?usp=sharing" class="text-blue-600 hover:underline block">Optional Homework (Colab)</a>
+            </td>
+            <td class="px-4 py-4">BEM-1021004</td>
+          </tr>
+
+          <!-- Week 5 -->
+          <tr class="bg-blue-50">
+            <td class="px-4 py-4 align-top font-semibold text-sm">Fri 10/01/2025<br>9:00–12:15</td>
+            <td class="px-4 py-4">
+              <ul class="list-disc list-inside space-y-1">
+                <li>Tracking by Detection</li>
+                <li>Explainable AI</li>
+                <li class="text-red-600 font-semibold">Optional Homework (+2 pts)</li>
+              </ul>
+            </td>
+            <td class="px-4 py-4">Gianni Franchi, Rémi Kazmierczak</td>
+            <td class="px-4 py-4">
+              <a href="IA323/ROB313_XAI.pdf" class="text-blue-600 hover:underline block">Lecture: Explainable AI</a>
+              <a href="IA323/cours_tracking_bydetection.pdf" class="text-blue-600 hover:underline block">Lecture: Tracking by Detection</a>
+              <a href="https://colab.research.google.com/drive/1nmwV7lcQNYzXXTB6dB65J0BcQvAm9rCc?usp=sharing" class="text-blue-600 hover:underline block">Homework: Explainable AI</a>
+            </td>
+            <td class="px-4 py-4">BEM-1021004</td>
+          </tr>
+
+          <!-- Week 6 -->
+          <tr>
+            <td class="px-4 py-4 align-top font-semibold text-sm">Fri 17/01/2025<br>9:00–12:15</td>
+            <td class="px-4 py-4">Self-Supervised Learning and Visual Foundation Models.</td>
+            <td class="px-4 py-4">Gianni Franchi, Andrei Bursuc</td>
+            <td class="px-4 py-4">
+              <a href="IA323/transfer-learning-2025.pdf" class="text-blue-600 hover:underline block">Lecture: Transfer Learning</a>
+              <a href="IA323/Cours_fondationmodelvision_VQA.pdf" class="text-blue-600 hover:underline block">Lecture: Visual Foundation Models</a>
+            </td>
+            <td class="px-4 py-4">BEM-1021004</td>
+          </tr>
+
+          <!-- Week 7 -->
+          <tr class="bg-blue-50">
+            <td class="px-4 py-4 align-top font-semibold text-sm">Fri 24/01/2025<br>9:00–12:15</td>
+            <td class="px-4 py-4 font-semibold text-red-600">Final Exam</td>
+            <td class="px-4 py-4">Gianni Franchi</td>
+            <td class="px-4 py-4">
+              <a href="IA323/EXAM_IA323_24.pdf" class="text-blue-600 hover:underline">Exam 2024–2025</a>
+            </td>
+            <td class="px-4 py-4">ENSTA R111</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center">
+    <p>ROB313 – Deep Learning in Computer Vision © 2025 | ENSTA Paris</p>
+  </footer>
+</body>
+</html>
+
