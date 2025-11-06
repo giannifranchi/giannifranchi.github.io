@@ -33,6 +33,71 @@
       .navbar a:hover {
         color: #0078ff;
       }
+      /* --- Team Grid --- */
+      .team-section {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .team-section h2 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        color: #115996;
+      }
+      .member-grid {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+        gap: 20px;
+      }
+      .member-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        background: #ffffff;
+      }
+      .member-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #e0e0e0;
+        background-color: #f0f6ff;
+      }
+      .member-photo.placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #115996;
+        font-size: 28px;
+      }
+      .member-name {
+        margin-top: 12px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .member-role {
+        margin-top: 4px;
+        font-size: 0.95em;
+        color: #555;
+        text-align: center;
+      }
+      .member-links {
+        margin-top: 8px;
+        display: flex;
+        gap: 8px;
+      }
+      .member-links a {
+        color: #115996;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .member-links a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
 
@@ -47,97 +112,69 @@
 
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;">
       <tbody>
-        <tr><td>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:2.5%;width:63%;vertical-align:middle">
-                  <p class="name" style="text-align: center;">Gianni Franchi</p>
-                  <p>
-                    I am an Assistant Professor in the Department of Computer Science and Robotics at
-                    <a href="https://www.ensta-paris.fr/">ENSTA Paris</a>, part of
-                    <a href="https://www.ip-paris.fr/">Institut Polytechnique de Paris</a>, France.
-                    I also represent the AI <a href="http://www.idris.fr/eng/jean-zay/">Jean Zay</a> user council.
-                    Feel free to connect with me for any inquiries.
-                  </p>
-                  <p>
-                    I have been teaching Deep Learning, Computer Vision, and Machine Learning courses at both ENSTA Paris
-                    and Télécom Paris since 2020. Before my current role, I held positions as a postdoctoral researcher
-                    at Paris Saclay University from 2018 to 2020, and previously at Siegen University from 2016 to 2018.
-                    I earned my PhD in 2016 from Mines de Paris under the mentorship of Jesus Angulo,
-                    focusing on Fusion of Information, Machine Learning, and Image Processing.
-                  </p>
-                  <p>
-                    My research interests concern machine learning and computer vision applied to all sorts of modalities.
-                    I focus particularly on Uncertainty Quantification and XAI.
-                  </p>
-                  <p style="text-align:center">
-                    <a href="mailto:gianni.franchi@ensta-paris.fr">Email</a> &nbsp;/&nbsp;
-                    <a href="data/GianniFranchi-CV.pdf">CV</a> &nbsp;/&nbsp;
-                    <a href="https://scholar.google.com/citations?hl=en&user=ZCW6-psAAAAJ">Scholar</a> &nbsp;/&nbsp;
-                    <a href="https://twitter.com/GianniFranchi10">Twitter</a> &nbsp;/&nbsp;
-                    <a href="https://github.com/giannifranchi">Github</a>
-                  </p>
-                </td>
-                <td style="padding:2.5%;width:40%;max-width:40%">
-                  <a href="images/gianniF.jpg"><img style="width:100%;border-radius:50%;" alt="profile photo" src="images/gianniF.jpg"></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <tr><td style="padding:20px;">
+          <div class="team-section">
+            <h2>Principal Investigator</h2>
+            <div class="member-grid">
+              <div class="member-card">
+                <img class="member-photo" src="images/gianniF.jpg" alt="Gianni Franchi">
+                <div class="member-name">Gianni Franchi</div>
+                <div class="member-role">Assistant Professor, ENSTA Paris</div>
+              </div>
+            </div>
 
-          <!-- Existing content -->
-          <table style="width:100%;border:0px;margin:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2>Current PhD Students</h2>
-                  <ul>
-                    <li>2022–2025, Rémi Kazmierczak, co-advised with Eloïse Berthier, Goran Frehse, topic: XAI and foundation models</li>
-                    <li>2022–2025, Olivier Laurent, co-advised with Adrien Chan Hon Tong, Emanuel Aldea, topic: Uncertainty and Deep Learning</li>
-                    <li>2022–2025, Adrien Lafage, co-advised with Mathieu Barbier, David Filliat, topic: Uncertainty and trajectory forecasting</li>
-                    <li>2022–2025, Mouïn Ben Ammar, co-advised with Arturo Mendoza Quispe, Antoine Manzanera, topic: Anomaly and Out of Distribution detection</li>
-                    <li>2022–2025, Firas GABETNI, co-advised with  Goran Frehse, topic:  Covariate shift detection and Uncertainty Quantification</li>
-                    <li>2022–2025, Joseph Hoche, co-advised with Michaël Krajecki, topic: Uncertainty Quantification and Multimodal Large Language Model (MLLM)</li>
-                    <li>2022–2025, Emirhan BILGIC, co-advised with Zhi YAN, Baptiste Caramiaux, topic: XAI and Human Computer Interaction (HCI) </li>
-                  </ul>
+            <h2>PhD Students</h2>
+            <div class="member-grid">
+              <div class="member-card">
+                <img class="member-photo" src="images/remi.jpeg" alt="Rémi Kazmierczak">
+                <div class="member-name">Rémi Kazmierczak</div>
+                <div class="member-role">PhD Student (2022–2025)</div>
+                <div class="member-links"><a href="https://scholar.google.com/citations?user=a3HtUiwAAAAJ">Scholar</a></div>
+              </div>
+              <div class="member-card">
+                <img class="member-photo" src="images/olivier.jpeg" alt="Olivier Laurent">
+                <div class="member-name">Olivier Laurent</div>
+                <div class="member-role">PhD Student (2022–2025)</div>
+                <div class="member-links"><a href="https://scholar.google.com/citations?user=RW4CQ68AAAAJ">Scholar</a></div>
+              </div>
+              <div class="member-card">
+                <img class="member-photo" src="images/adrien.jpeg" alt="Adrien Lafage">
+                <div class="member-name">Adrien Lafage</div>
+                <div class="member-role">PhD Student (2022–2025)</div>
+                <div class="member-links"><a href="https://scholar.google.com/citations?user=acPtbPoAAAAJ">Scholar</a></div>
+              </div>
+              <div class="member-card">
+                <img class="member-photo" src="images/mouin.png" alt="Mouïn Ben Ammar">
+                <div class="member-name">Mouïn Ben Ammar</div>
+                <div class="member-role">PhD Student (2022–2025)</div>
+                <div class="member-links"><a href="https://scholar.google.com/citations?user=zBDRc_0AAAAJ">Scholar</a></div>
+              </div>
+              <div class="member-card">
+                <img class="member-photo" src="images/firas.jpeg" alt="Firas Gabetni">
+                <div class="member-name">Firas Gabetni</div>
+                <div class="member-role">PhD Student (2025–Present)</div>
+                <div class="member-links"><a href="https://scholar.google.com/citations?user=aOCKWVAAAAAJ">Scholar</a></div>
+              </div>
+              <div class="member-card">
+                <img class="member-photo" src="images/emirhan.jpeg" alt="Emirhan Bilgiç">
+                <div class="member-name">Emirhan Bilgiç</div>
+                <div class="member-role">PhD Student (2025–Present)</div>
+                <div class="member-links"><a href="https://scholar.google.com/citations?user=g7ArzcsAAAAJ">Scholar</a></div>
+              </div>
+              <div class="member-card">
+                <img class="member-photo" src="images/joseph.jpeg" alt="Joseph Hoche">
+                <div class="member-name">Joseph Hoche</div>
+                <div class="member-role">PhD Student (2025–Present)</div>
+              </div>
+            </div>
 
-                  <h2>Alumni Students</h2>
-                  <ul>
-                    <li>2020–2023, Xuanlong Yu, co-advised with Emanuel Aldea</li>
-                  </ul>
-                  
-                  <h2> Postdocs</h2>
-     
-                  
-                  <h2>Alumni  Postdocs</h2>
-                  <ul><li>2023–2024, Antoine Guillaume</li></ul>
-                  <ul><li>2023–2024, Sébastien POPESCU</li></ul>
-
-                  <h2>Research</h2>
-                  <p>I'm interested in robust computer vision, anomaly detection, uncertainty quantification, out-of-distribution detection, certifiable AI, and explainable AI. If you have any projects or questions where collaboration could be beneficial, please reach out.</p>
-                  <p>I'm currently involved in the development of a PyTorch library, <strong>Torch Uncertainty</strong>, tailored for uncertainty quantification. Contributions are welcome!</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table style="width:100%;margin:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px">
-                  <br>
-                  <p style="text-align:right;font-size:small;">
-                    Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>.
-                    <strong>Do not</strong> scrape the HTML from this page itself — use the GitHub code instead.
-                    Also consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s
-                    <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
+            <h2>Alumni</h2>
+            <ul>
+              <li>Xuanlong Yu — PhD (2020–2023)</li>
+              <li>Antoine Guillaume — Postdoc (2023–2024)</li>
+              <li>Sébastian Popescu — Postdoc (2023–2024)</li>
+            </ul>
+          </div>
         </td></tr>
       </tbody>
     </table>
