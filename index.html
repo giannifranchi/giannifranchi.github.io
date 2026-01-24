@@ -33,11 +33,21 @@
       .navbar a:hover {
         color: #0078ff;
       }
+
+      /* Recruitment Highlight Box */
+      .recruitment-box {
+        background-color: #fff9c4;
+        border: 2px solid #fbc02d;
+        padding: 15px;
+        margin: 20px auto;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+      }
     </style>
   </head>
 
   <body>
-    <!-- Navigation Bar -->
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="publications.html">Publications</a>
@@ -48,28 +58,34 @@
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;">
       <tbody>
         <tr><td>
+          
+          <div class="recruitment-box">
+            🚀 We are hiring! Multiple Postdoc and Permanent positions are available within my group. 
+            <br>
+            <span style="font-size: 0.9em; color: #d32f2f;">(Please note: Due to lab security requirements, these positions are open to European nationals only).</span>
+            <br>
+            <a href="mailto:gianni.franchi@ensta-paris.fr">Contact me if you are interested!</a>
+          </div>
+
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:auto;">
             <tbody>
               <tr>
                 <td style="padding:2.5%;width:63%;vertical-align:middle">
                   <p class="name" style="text-align: center;">Gianni Franchi</p>
                   <p>
-                    I am an Assistant Professor in the Department of Computer Science and Robotics at
-                    <a href="https://www.ensta-paris.fr/">ENSTA Paris</a>, part of
-                    <a href="https://www.ip-paris.fr/">Institut Polytechnique de Paris</a>, France.
-                    I also represent the AI <a href="http://www.idris.fr/eng/jean-zay/">Jean Zay</a> user council.
-                    Feel free to connect with me for any inquiries.
+                    I am a <strong>Research Director at AMIAD</strong>, where I lead the <strong>Trustworthy AI</strong> group. 
+                    Our research focuses on Uncertainty Quantification, Explainable AI (XAI), Model Attacks, Prompt Injection, 
+                    Cybersecurity, and Deepfake Detection. 
                   </p>
                   <p>
-                    I have been teaching Deep Learning, Computer Vision, and Machine Learning courses at both ENSTA Paris
-                    and Télécom Paris since 2020. Before my current role, I held positions as a postdoctoral researcher
-                    at Paris Saclay University from 2018 to 2020, and previously at Siegen University from 2016 to 2018.
+                    In addition to my research leadership, I am a <strong>Professor at ENSTA Paris</strong> 
+                    (<a href="https://www.ip-paris.fr/">Institut Polytechnique de Paris</a>), where I teach 
+                    most of these topics to the next generation of AI engineers and researchers.
+                  </p>
+                  <p>
+                    I also represent the AI <a href="http://www.idris.fr/eng/jean-zay/">Jean Zay</a> user council.
                     I earned my PhD in 2016 from Mines de Paris under the mentorship of Jesus Angulo,
                     focusing on Fusion of Information, Machine Learning, and Image Processing.
-                  </p>
-                  <p>
-                    My research interests concern machine learning and computer vision applied to all sorts of modalities.
-                    I focus particularly on Uncertainty Quantification and XAI.
                   </p>
                   <p style="text-align:center">
                     <a href="mailto:gianni.franchi@ensta-paris.fr">Email</a> &nbsp;/&nbsp;
@@ -86,11 +102,30 @@
             </tbody>
           </table>
 
-          <!-- Existing content -->
           <table style="width:100%;border:0px;margin:auto;">
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
+                  
+                  <h2>Research & Societal Impact</h2>
+                  <p>
+                    My work is dedicated to building <strong>Trustworthy AI</strong>. As AI systems become integrated into 
+                    the fabric of society—from autonomous driving to healthcare and national security—it is vital that 
+                    these systems are not only high-performing but also reliable, transparent, and secure.
+                  </p>
+                  <p>
+                    Our group works on:
+                    <ul>
+                      <li><strong>Uncertainty Quantification:</strong> Ensuring models "know when they don't know," preventing overconfident but wrong decisions.</li>
+                      <li><strong>XAI:</strong> Making black-box models interpretable for human experts.</li>
+                      <li><strong>Model Security:</strong> Defending against adversarial attacks, prompt injections, and deepfakes to protect digital integrity and democratic discourse.</li>
+                    </ul>
+                  </p>
+                  <p>
+                    I'm currently involved in the development of <strong>Torch Uncertainty</strong>, a PyTorch library 
+                    tailored for uncertainty quantification. Contributions are welcome!
+                  </p>
+
                   <h2>Current PhD Students</h2>
                   <ul>
                     <li>2022–2025, Rémi Kazmierczak, co-advised with Eloïse Berthier, Goran Frehse, topic: XAI and foundation models</li>
@@ -107,16 +142,15 @@
                     <li>2020–2023, Xuanlong Yu, co-advised with Emanuel Aldea</li>
                   </ul>
                   
-                  <h2> Postdocs</h2>
-     
+                  <h2>Postdocs</h2>
+                  <p><em>Positions available — see highlight at top of page.</em></p>
                   
-                  <h2>Alumni  Postdocs</h2>
-                  <ul><li>2023–2024, Antoine Guillaume</li></ul>
-                  <ul><li>2023–2024, Sebastian POPESCU</li></ul>
+                  <h2>Alumni Postdocs</h2>
+                  <ul>
+                    <li>2023–2024, Antoine Guillaume</li>
+                    <li>2023–2024, Sebastian POPESCU</li>
+                  </ul>
 
-                  <h2>Research</h2>
-                  <p>I'm interested in robust computer vision, anomaly detection, uncertainty quantification, out-of-distribution detection, certifiable AI, and explainable AI. If you have any projects or questions where collaboration could be beneficial, please reach out.</p>
-                  <p>I'm currently involved in the development of a PyTorch library, <strong>Torch Uncertainty</strong>, tailored for uncertainty quantification. Contributions are welcome!</p>
                 </td>
               </tr>
             </tbody>
@@ -129,9 +163,6 @@
                   <br>
                   <p style="text-align:right;font-size:small;">
                     Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>.
-                    <strong>Do not</strong> scrape the HTML from this page itself — use the GitHub code instead.
-                    Also consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s
-                    <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
                   </p>
                 </td>
               </tr>
@@ -143,4 +174,3 @@
     </table>
   </body>
 </html>
-
